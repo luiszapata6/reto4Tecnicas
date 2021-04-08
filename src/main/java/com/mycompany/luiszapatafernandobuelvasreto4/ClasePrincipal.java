@@ -1,78 +1,95 @@
-/*
 
-Desarrollado por:
-
-Luis Fernando Zapata
-Fernando Buelvas
-
-*/
 
 package com.mycompany.luiszapatafernandobuelvasreto4;
+import java.util.Scanner;
 
 public class ClasePrincipal {
     
     public static void main(String[] args){
+        
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ingrese cantidad de platos a crear: ");
+        int numPlat = input.nextInt();
+        System.out.println("\n");
+            
+        
+        platoRestaurante regPlatos[] = new platoRestaurante[numPlat];
+                   
+        for(int p = 0; p < regPlatos.length; p++ ){
+            
+            regPlatos[p] = new platoRestaurante();
+            regPlatos[p].llenarProd();
+            regPlatos[p].setRefv(p);
+            
+            /*regPlatos[p].setNom(regPlatos[p].getNom());
+            regPlatos[p].setDesc(regPlatos[p].getDesc());*/
+            /*regPlatos[p].setCost(regPlatos[p].getCosto());
+            regPlatos[p].setPrec(regPlatos[p].getPrecio());
+            regPlatos[p].setCant(regPlatos[p].getCant());
+            regPlatos[p].setTipo(regPlatos[p].getTipo());*/
+            
+        }
+        
+         System.out.println("CARTA: \n");
+    
+        for(int i = 0; i < regPlatos.length; i++){
+            regPlatos[i].mostrarCarta();
+        }
+        
+        System.out.println("\n Ingrese cantidad de ventas a registrar: ");
+        int numVent = input.nextInt();
+        System.out.println("\n");
+        
+        
+        regVentas newVent[] = new regVentas[numVent];
+        
+        for(int w = 0; w < newVent.length; w++){
+            newVent[w] = new regVentas();
+        }
+        
+        for(int z = 0; z < newVent.length; z++ ){
+              
+            newVent[z].pedirDoc();
+            newVent[z].pedirPcant();
+            System.out.println(newVent[z].getPcant());
+            System.out.println(newVent.length);
+            
+            for(int y = 0; y < newVent[z].getPcant(); y++){
+            
+            
+            newVent[y].llenarVenta();
+            newVent[y].setNom(regPlatos[newVent[z].getCodv()].getNom());
+            newVent[y].setPrec(regPlatos[newVent[z].getCodv()].getPrecio()*newVent[z].getCantv());
+            newVent[y].setTypeDocv(newVent[z].getTypeDocv());
+            newVent[y].setDocv(newVent[z].getDocv());
+     
+            
+            }
+            
+            // newVent[z].setCodv(newVent[z].getCodv());
+            // newVent[z].setCantv(newVent[z].getCantv());
+            // newVent[z].setFechav(newVent[z].getFechav());
+            // newVent[z].setTypeDocv(newVent[z].getTypeDocv());
+            // newVent[z].setDocv(newVent[z].getDocv());
+                
+        }
+        
+        
        
+        System.out.println("Cantidad de clientes a registrar: " + numVent);
+        int numClient = numVent;
+        System.out.println("\n");
         
-        platoRestaurante regPlatos[] = {
-            new platoRestaurante(), 
-            new platoRestaurante(), 
-            new platoRestaurante()};
         
-        regPlatos[0].setNom("AREPA DE CHÓCOLO");
-        regPlatos[0].setDesc("Arepa de puro maíz. ");
-        regPlatos[0].setCost(5000);
-        regPlatos[0].setPrec(6500);
-        regPlatos[0].setCant(160);
-        regPlatos[0].setTipo("Desayuno");
+        /*regClientes hisClient[] = new regClientes[numClient];
         
-        regPlatos[1].setNom("BANDEJA PAISA");
-        regPlatos[1].setDesc("Plato típico antioqueño. ");
-        regPlatos[1].setCost(15000);
-        regPlatos[1].setPrec(19500);
-        regPlatos[1].setCant(240);
-        regPlatos[1].setTipo("Almuerzo");
+        for(int x = 0; x < hisClient.length; x++ ){
+            hisClient[x] =  new regClientes();
+            hisClient[x].llenarCliente();
+            }*/
         
-        regPlatos[2].setNom("CHORIZO ANTIOQUEÑO");
-        regPlatos[2].setDesc("De cerdo con limón y arepa. ");
-        regPlatos[2].setCost(11000);
-        regPlatos[2].setPrec(14300);
-        regPlatos[2].setCant(214);
-        regPlatos[2].setTipo("Comida");
-       
         
-        regVentas newVent[] = {
-            new regVentas(), 
-            new regVentas(), 
-            new regVentas()};
-        
-        newVent[0].setNom(regPlatos[0].getNom());
-        newVent[0].setCantv(4);
-        newVent[0].setPrec(regPlatos[0].getPrecio()*newVent[0].getCantv());
-        newVent[0].setFechav("05/04/2021");
-        newVent[0].setTypeDocv("CC");
-        newVent[0].setDocv(102836721);
-        
-        newVent[1].setNom(regPlatos[2].getNom());
-        newVent[1].setCantv(5);
-        newVent[1].setPrec(regPlatos[2].getPrecio()*newVent[1].getCantv());
-        newVent[1].setFechav("05/04/2021");
-        newVent[1].setTypeDocv("CC");
-        newVent[1].setDocv(103683651);
-        
-        newVent[2].setNom(regPlatos[1].getNom());
-        newVent[2].setCantv(3);
-        newVent[2].setPrec(regPlatos[1].getPrecio()*newVent[2].getCantv());
-        newVent[2].setFechav("05/04/2021");
-        newVent[2].setTypeDocv("NIT");
-        newVent[2].setDocv(900928101);
-        
-        regClientes hisClientes[] = {
-            new regClientes(), 
-            new regClientes(), 
-            new regClientes()};
-        
-        hisClientes[0].setTypeDocv(newVent[0].getTypeDocv());
+        /*hisClientes[0].setTypeDocv(newVent[0].getTypeDocv());
         hisClientes[0].setDocv(newVent[0].getDocv());
         hisClientes[0].setNomCliente("Luis Zapata");
         
@@ -127,22 +144,13 @@ public class ClasePrincipal {
         
         nuevMesa[4].setNumMesa(5);
         nuevMesa[4].setCapMesa(2);
-        nuevMesa[4].setDescMesa("Cómoda mesa para 2 personas.");
+        nuevMesa[4].setDescMesa("Cómoda mesa para 2 personas.");*/
         
                 
-        System.out.println("CARTA: \n");
     
-        for(int i = 0; i < regPlatos.length; i++){
-            regPlatos[i].mostrarCarta();
-        }
-    
-        System.out.println("VENTAS DEL DÍA: \n");
-                
-        for(int k = 0; k < newVent.length; k++ ){
-            newVent[k].mostrarVenta();
-        }
         
-        System.out.println("REGISTRO DE CLIENTES: \n");
+        
+        /*System.out.println("REGISTRO DE CLIENTES: \n");
         
         for(int j = 0; j < hisClientes.length; j++){
              hisClientes[j].mostrarCliente();   
@@ -158,7 +166,7 @@ public class ClasePrincipal {
         
         for(int w = 0; w < nuevMesa.length; w++){
             nuevMesa[w].mostrarMesas();
-        }
+        }*/
                 
     }   
          
