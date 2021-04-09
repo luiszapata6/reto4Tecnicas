@@ -59,56 +59,56 @@ public class regVentas extends platoRestaurante{
     }
     
         
-    public void setCantv(int cantv) {
-        this.cantv = cantv;
-    }
-    
-    public void setFechav(String fechav) {
-        this.fechav = fechav;
-    }
+        public void setCantv(int cantv) {
+            this.cantv = cantv;
+        }
 
-    public void setTypeDocv(String typeDocv) {
-        this.typeDocv = typeDocv;
-    }
+        public void setFechav(String fechav) {
+            this.fechav = fechav;
+        }
 
-    
-    public void setDocv(int docv) {
-        this.docv = docv;
-    }
+        public void setTypeDocv(String typeDocv) {
+            this.typeDocv = typeDocv;
+        }
 
-    public void setCodv(int codv) {
-        this.codv = codv;
-    }
-    
-    public int getCantv() {
-        return this.cantv;
-    }
 
-    public String getFechav() {
-        return this.fechav;
-    }
+        public void setDocv(int docv) {
+            this.docv = docv;
+        }
 
-    public String getTypeDocv() {
-        return this.typeDocv;
-    }
+        public void setCodv(int codv) {
+            this.codv = codv;
+        }
 
-    public int getCodv() {
-        return this.codv;
-    }
+        public int getCantv() {
+            return this.cantv;
+        }
 
-    public int getDocv() {
-        return this.docv;
-    }
+        public String getFechav() {
+            return this.fechav;
+        }
 
-    public void mostrarVenta(){
-        
-        System.out.println("Producto: " + getNom());
-        System.out.println("Cantidad: " + getCantv());
-        System.out.println("Precio total: " + getPrecio());
-        System.out.println("Fecha: " + getFechav());
-        System.out.println("Documento cliente: " + getTypeDocv() + " " + getDocv());
-        System.out.println("\n");
-    }
+        public String getTypeDocv() {
+            return this.typeDocv;
+        }
+
+        public int getCodv() {
+            return this.codv;
+        }
+
+        public int getDocv() {
+            return this.docv;
+        }
+
+        public void mostrarVenta(){
+
+            System.out.println("Producto: " + getNom());
+            System.out.println("Cantidad: " + getCantv());
+            System.out.println("Precio total: " + getPrecio());
+            System.out.println("Fecha: " + getFechav());
+            System.out.println("Documento cliente: " + getTypeDocv() + " " + getDocv());
+            System.out.println("\n");
+        }
   
 }
     

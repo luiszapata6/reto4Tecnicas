@@ -47,11 +47,6 @@ public class ClasePrincipal {
             newVent[w].setNom(regPlatos[newVent[w].getCodv()].getNom());
             newVent[w].setPrec(regPlatos[newVent[w].getCodv()].getPrecio()*newVent[w].getCantv());
                     
-                    
-                    //newVent[y].getTypeDocv();
-                    //newVent[y].getDocv();
-
-            
             
         }
             
@@ -61,40 +56,39 @@ public class ClasePrincipal {
             newVent[x].mostrarVenta();
         }
         
+            
+        System.out.println("INGRESE CANTIDAD DE CLIENTES A REGISTRAR: ");
+        int numClient = input.nextInt();
+        System.out.println("\n");
         
-        
-        
-        
-        
-        
-        
-        
-                
-        
-        
-        
-      
-        
-        
-        /*regClientes hisClient[] = new regClientes[numClient];
+           
+       regClientes hisClient[] = new regClientes[numClient];
         
         for(int x = 0; x < hisClient.length; x++ ){
             hisClient[x] =  new regClientes();
             hisClient[x].llenarCliente();
-            }*/
+            hisClient[x].pedirDoc();
+            }
+        
+        System.out.println("CLIENTES REGISTRADOS: ");
+        
+        for(int p = 0; p < hisClient.length; p++){
+            hisClient[p].mostrarCliente();
+        }
         
         
-        /*hisClientes[0].setTypeDocv(newVent[0].getTypeDocv());
-        hisClientes[0].setDocv(newVent[0].getDocv());
-        hisClientes[0].setNomCliente("Luis Zapata");
         
-        hisClientes[1].setTypeDocv(newVent[1].getTypeDocv());
-        hisClientes[1].setDocv(newVent[1].getDocv());
-        hisClientes[1].setNomCliente("Jose Buelvas");
+
+       
+       
+       /* System.out.println("REGISTRO DE CLIENTES: \n");
         
-        hisClientes[2].setTypeDocv(newVent[2].getTypeDocv());
-        hisClientes[2].setDocv(newVent[2].getDocv());
-        hisClientes[2].setNomCliente("INVERSIONES ANONIMAS SAS");
+        for(int j = 0; j < hisClientes.length; j++){
+             hisClientes[j].mostrarCliente();   
+        }
+       
+       
+       
         
         regPedidos nuevPed[] = {
             new regPedidos(), 
@@ -145,11 +139,7 @@ public class ClasePrincipal {
     
         
         
-        /*System.out.println("REGISTRO DE CLIENTES: \n");
-        
-        for(int j = 0; j < hisClientes.length; j++){
-             hisClientes[j].mostrarCliente();   
-        }
+  /*
         
         System.out.println("REGISTRO DE PEDIDOS: \n");
         

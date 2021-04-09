@@ -13,6 +13,12 @@ public class regClientes extends regVentas {
 
         }
     
+        public void llenarCliente(){
+            System.out.println("Ingrese nombre del cliente: ");
+            this.nomCliente = input.nextLine();
+            System.out.println("\n");
+        }
+    
     
 
         public void setNomCliente(String nomCliente) {
