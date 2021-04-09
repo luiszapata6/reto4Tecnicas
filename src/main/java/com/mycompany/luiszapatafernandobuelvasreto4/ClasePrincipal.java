@@ -1,8 +1,4 @@
-/* 
-    Desarrollado por:
-    Luis Fernando Zapata
-    Fernando José Buelvas
- */
+
 
 package com.mycompany.luiszapatafernandobuelvasreto4;
 import java.util.Scanner;
@@ -36,7 +32,7 @@ public class ClasePrincipal {
         
         System.out.println("REGISTRO DE VENTAS: \n");
         
-        System.out.println("\nDebe registrar una venta por producto.\n" + "Ingrese cantidad de ventas a registrar: ");
+        System.out.println("\nIngrese cantidad de ventas a registrar: ");
         int numVent = input.nextInt();
         System.out.println("\n");
 
