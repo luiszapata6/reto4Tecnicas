@@ -9,7 +9,7 @@ public class regVentas extends platoRestaurante{
     private int cantv;
     private String fechav;
     private String typeDocv;
-    private int docv;
+    private long docv;
     private int codv;
     private int pcant;
           
@@ -34,7 +34,7 @@ public class regVentas extends platoRestaurante{
         System.out.println("\n");
         
         System.out.println("Número de documento: ");
-        this.docv = input.nextInt();
+        this.docv = input.nextLong();
         System.out.println("\n");
     
     }
@@ -72,7 +72,7 @@ public class regVentas extends platoRestaurante{
         }
 
 
-        public void setDocv(int docv) {
+        public void setDocv(long docv) {
             this.docv = docv;
         }
 
@@ -96,7 +96,7 @@ public class regVentas extends platoRestaurante{
             return this.codv;
         }
 
-        public int getDocv() {
+        public long getDocv() {
             return this.docv;
         }
 

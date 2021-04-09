@@ -15,7 +15,7 @@ public class regClientes extends regVentas {
     
         public void llenarCliente(){
             System.out.println("Ingrese nombre del cliente: ");
-            this.nomCliente = input.nextLine();
+            this.nomCliente = input.next();
             System.out.println("\n");
         }
     
