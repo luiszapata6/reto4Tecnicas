@@ -16,13 +16,15 @@ public class regMesas extends regPedidos{
     
     public void llenarMesa(){
         
+        System.out.println("Ingrese descripción de mesa: ");
+        this.descMesa = input.nextLine();
+        System.out.println("\n");
+        
         System.out.println("Ingrese capacidad de mesa: ");
         this.capMesa = input.nextInt();
         System.out.println("\n");
         
-        System.out.println("Ingrese descripción de mesa: ");
-        this.descMesa = input.next();
-        System.out.println("\n");
+        
     
     }
     
@@ -36,11 +38,11 @@ public class regMesas extends regPedidos{
     }
 
     public int getCapMesa() {
-        return capMesa;
+        return this.capMesa;
     }
 
     public String getDescMesa() {
-        return descMesa;
+        return this.descMesa;
     }
     
     public void mostrarMesas(){

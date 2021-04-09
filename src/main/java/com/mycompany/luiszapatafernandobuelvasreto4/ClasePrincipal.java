@@ -8,6 +8,7 @@ public class ClasePrincipal {
     public static void main(String[] args){
         
         Scanner input = new Scanner(System.in);
+        System.out.println("REGISTRO DE PLATOS: \n");
         System.out.println("Ingrese cantidad de platos a crear: ");
         int numPlat = input.nextInt();
         System.out.println("\n");
@@ -58,8 +59,9 @@ public class ClasePrincipal {
             newVent[y].mostrarVenta();
         }
         
+        System.out.println("REGISTRO DE CLIENTES: \n");
             
-        System.out.println("INGRESE CANTIDAD DE CLIENTES A REGISTRAR: ");
+        System.out.println("Ingrese cantidad de clientes a registrar: ");
         int numClient = input.nextInt();
         System.out.println("\n");
         
@@ -79,9 +81,9 @@ public class ClasePrincipal {
             hisClient[t].mostrarCliente();
         }
         
-        
+        System.out.println("REGISTRO DE PEDIDOS: \n");
       
-        System.out.println("INGRESE CANTIDAD DE PEDIDOS A REGISTRAR:");
+        System.out.println("Ingrese cantidad de pedidos a registrar:");
         int cantPed = input.nextInt();
         System.out.println("\n");
         
@@ -102,8 +104,9 @@ public class ClasePrincipal {
             nuevPed[v].mostrarPedido();
         } 
 
+        System.out.println("REGISTRO DE MESAS: \n");
         
-        System.out.println("INGRESE CANTIDAD DE MESAS A REGISTRAR:");
+        System.out.println("Ingrese cantidad de mesas a registrar:");
         int cantMesa = input.nextInt();
         System.out.println("\n");
         
