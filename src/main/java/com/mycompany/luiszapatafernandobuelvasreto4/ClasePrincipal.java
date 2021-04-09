@@ -1,4 +1,8 @@
-
+/*
+    Desarrollado por:
+    Luis Fernando Zapata
+    Fernando Jose Buelvas
+*/
 
 package com.mycompany.luiszapatafernandobuelvasreto4;
 import java.util.Scanner;
