@@ -12,6 +12,8 @@ public class regClientes extends regVentas {
         this.nomCliente = null;
 
         }
+    
+    
 
         public void setNomCliente(String nomCliente) {
             this.nomCliente = nomCliente;

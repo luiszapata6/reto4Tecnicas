@@ -28,8 +28,9 @@ public class regVentas extends platoRestaurante{
     Scanner input = new Scanner(System.in);
     
     public void pedirDoc(){
+        
         System.out.println("Tipo de documento del cliente: ");
-        this.typeDocv = input.next();
+        this.typeDocv = input.nextLine();
         System.out.println("\n");
         
         System.out.println("Número de documento: ");
@@ -38,12 +39,6 @@ public class regVentas extends platoRestaurante{
     
     }
     
-    public void pedirPcant(){
-    
-        System.out.println("Cantidad de platos del menú comprados: ");
-        this.pcant = input.nextInt();
-        System.out.println("\n");
-    }
     
     public void llenarVenta(){
     
@@ -76,9 +71,6 @@ public class regVentas extends platoRestaurante{
         this.typeDocv = typeDocv;
     }
 
-    public void setPcant(int pcant) {
-        this.pcant = pcant;
-    }
     
     public void setDocv(int docv) {
         this.docv = docv;
@@ -102,10 +94,6 @@ public class regVentas extends platoRestaurante{
 
     public int getCodv() {
         return this.codv;
-    }
-
-    public int getPcant() {
-        return pcant;
     }
 
     public int getDocv() {

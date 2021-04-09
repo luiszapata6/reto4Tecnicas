@@ -21,13 +21,6 @@ public class ClasePrincipal {
             regPlatos[p].llenarProd();
             regPlatos[p].setRefv(p);
             
-            /*regPlatos[p].setNom(regPlatos[p].getNom());
-            regPlatos[p].setDesc(regPlatos[p].getDesc());*/
-            /*regPlatos[p].setCost(regPlatos[p].getCosto());
-            regPlatos[p].setPrec(regPlatos[p].getPrecio());
-            regPlatos[p].setCant(regPlatos[p].getCant());
-            regPlatos[p].setTipo(regPlatos[p].getTipo());*/
-            
         }
         
          System.out.println("CARTA: \n");
@@ -36,49 +29,51 @@ public class ClasePrincipal {
             regPlatos[i].mostrarCarta();
         }
         
-        System.out.println("\n Ingrese cantidad de ventas a registrar: ");
+        System.out.println("REGISTRO DE VENTAS: \n");
+        
+        System.out.println("\nDebe registrar una venta por producto.\n" + "Ingrese cantidad de ventas a registrar: ");
         int numVent = input.nextInt();
         System.out.println("\n");
-        
+
         
         regVentas newVent[] = new regVentas[numVent];
         
-        for(int w = 0; w < newVent.length; w++){
-            newVent[w] = new regVentas();
-        }
-        
-        for(int z = 0; z < newVent.length; z++ ){
-              
-            newVent[z].pedirDoc();
-            newVent[z].pedirPcant();
-            System.out.println(newVent[z].getPcant());
-            System.out.println(newVent.length);
-            
-            for(int y = 0; y < newVent[z].getPcant(); y++){
-            
-            
-            newVent[y].llenarVenta();
-            newVent[y].setNom(regPlatos[newVent[z].getCodv()].getNom());
-            newVent[y].setPrec(regPlatos[newVent[z].getCodv()].getPrecio()*newVent[z].getCantv());
-            newVent[y].setTypeDocv(newVent[z].getTypeDocv());
-            newVent[y].setDocv(newVent[z].getDocv());
-     
-            
-            }
-            
-            // newVent[z].setCodv(newVent[z].getCodv());
-            // newVent[z].setCantv(newVent[z].getCantv());
-            // newVent[z].setFechav(newVent[z].getFechav());
-            // newVent[z].setTypeDocv(newVent[z].getTypeDocv());
-            // newVent[z].setDocv(newVent[z].getDocv());
                 
+        for(int w = 0; w < newVent.length; w++){
+            
+            newVent[w] = new regVentas();
+            newVent[w].pedirDoc();
+            newVent[w].llenarVenta();
+            newVent[w].setNom(regPlatos[newVent[w].getCodv()].getNom());
+            newVent[w].setPrec(regPlatos[newVent[w].getCodv()].getPrecio()*newVent[w].getCantv());
+                    
+                    
+                    //newVent[y].getTypeDocv();
+                    //newVent[y].getDocv();
+
+            
+            
+        }
+            
+        System.out.println("VENTAS REGISTRADAS: \n");
+    
+        for(int x = 0; x < newVent.length; x++){
+            newVent[x].mostrarVenta();
         }
         
         
-       
-        System.out.println("Cantidad de clientes a registrar: " + numVent);
-        int numClient = numVent;
-        System.out.println("\n");
+        
+        
+        
+        
+        
+        
+        
+                
+        
+        
+        
+      
         
         
         /*regClientes hisClient[] = new regClientes[numClient];
@@ -168,6 +163,8 @@ public class ClasePrincipal {
             nuevMesa[w].mostrarMesas();
         }*/
                 
-    }   
-         
+     
+    } 
 }
+
+
